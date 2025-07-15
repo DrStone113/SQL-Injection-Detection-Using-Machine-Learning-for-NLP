@@ -21,7 +21,12 @@ This project is a final assignment for the Computer Security course (CT201H) at 
 Below is the interface of the application when analyzing different types of queries.
 
 - Case 1: Detecting malicious queries
+
+  ![Case 1 Screenshot](images/screenshot-1.png)
+
 - Case 2: Confirming safe queries
+
+  ![Case 2 Screenshot](images/screenshot-2.png)
 
 ### Live Demo
 
