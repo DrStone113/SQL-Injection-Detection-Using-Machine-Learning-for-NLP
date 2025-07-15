@@ -21,9 +21,14 @@ This project is a final assignment for the Computer Security course (CT201H) at 
 Below is the interface of the application when analyzing different types of queries.
 
 - Case 1: Detecting malicious queries
-![Detecting malicious queries](./images/screenshot-1.png)
 - Case 2: Confirming safe queries
-![Confirming safe queries](./images/screenshot-2.png)
+
+### Live Demo
+
+The application is deployed and accessible online at:
+
+[Streamlit Community Cloud Deployment](https://sql-injection-detection-using-machine-learning-for-nlpgit-75jh.streamlit.app/)
+
 ---
 
 🛠️ **Installation and Local Run**
@@ -44,6 +49,12 @@ Open a terminal and run the following commands to clone the source code:
 ```bash
 git clone https://github.com/your-username/your-repository-name.git
 cd your-repository-name
+```
+
+Alternatively, you can clone the original repository this project is based on:
+
+```bash
+git clone https://github.com/Shaffaprawira/SQL-Injection-Detection-Using-Machine-Learning-for-NLP.git
 ```
 
 b. Create and activate a virtual environment:
@@ -134,3 +145,5 @@ A new browser tab will open automatically, displaying the application. You can n
 🙏 **Acknowledgments**
 
 This project is developed based on the ideas and dataset from the repository SQL-Injection-Detection-Using-Machine-Learning-for-NLP by Shaffaprawira.
+
+Original repository link: [GitHub - Shaffaprawira/SQL-Injection-Detection-Using-Machine-Learning-for-NLP](https://github.com/Shaffaprawira/SQL-Injection-Detection-Using-Machine-Learning-for-NLP.git)
