@@ -2,8 +2,6 @@
 
 This project is a web application built with Streamlit, utilizing Machine Learning and Natural Language Processing (NLP) techniques to detect SQL Injection attacks. Users can input a query string, and the application will predict whether the string is malicious or not.
 
-This project is a final assignment for the Computer Security course (CT201H) at Can Tho University.
-
 ---
 
 ✨ **Features**
