@@ -1,68 +1,68 @@
 # SQL Injection Detection using NLP & Streamlit
 
-Dự án này là một ứng dụng web được xây dựng bằng Streamlit, sử dụng mô hình học máy (Machine Learning) và Xử lý ngôn ngữ tự nhiên (NLP) để phát hiện các cuộc tấn công SQL Injection. Người dùng có thể nhập một chuỗi truy vấn, và ứng dụng sẽ dự đoán xem chuỗi đó có độc hại hay không.
+This project is a web application built with Streamlit, utilizing Machine Learning and Natural Language Processing (NLP) techniques to detect SQL Injection attacks. Users can input a query string, and the application will predict whether the string is malicious or not.
 
-Đây là sản phẩm của đồ án môn học An toàn Máy tính (CT201H) tại Trường Đại học Cần Thơ.
+This project is a final assignment for the Computer Security course (CT201H) at Can Tho University.
 
 ---
 
-✨ **Tính năng**
+✨ **Features**
 
-- **Phân tích thời gian thực:** Phân tích các chuỗi truy vấn do người dùng nhập vào ngay lập tức.
-- **Mô hình NLP:** Sử dụng TF-IDF và Logistic Regression để phân loại văn bản.
-- **Giao diện trực quan:** Giao diện người dùng đơn giản, sạch sẽ được xây dựng bằng Streamlit.
-- **Hiển thị kết quả rõ ràng:** Kết quả được hiển thị với màu sắc (Đỏ cho độc hại, Xanh cho an toàn) và điểm tin cậy của mô hình.
-- **Dễ dàng triển khai:** Có thể được triển khai dễ dàng lên Streamlit Community Cloud.
+- **Real-time analysis:** Instantly analyze query strings entered by users.
+- **NLP Model:** Uses TF-IDF and Logistic Regression for text classification.
+- **User-friendly interface:** Simple and clean UI built with Streamlit.
+- **Clear result display:** Results are shown with colors (Red for malicious, Green for safe) and model confidence scores.
+- **Easy deployment:** Can be easily deployed on Streamlit Community Cloud.
 
 ---
 
 🚀 **Demo**
 
-Dưới đây là giao diện của ứng dụng khi phân tích các loại truy vấn khác nhau.
+Below is the interface of the application when analyzing different types of queries.
 
-- Trường hợp 1: Phát hiện truy vấn độc hại (Malicious)
-- Trường hợp 2: Xác nhận truy vấn an toàn (Benign)
+- Case 1: Detecting malicious queries
+- Case 2: Confirming safe queries
 
 ---
 
-🛠️ **Cài đặt và Chạy cục bộ**
+🛠️ **Installation and Local Run**
 
-Để chạy dự án này trên máy của bạn, hãy làm theo các bước sau.
+To run this project on your machine, follow these steps.
 
-### 1. Yêu cầu
+### 1. Requirements
 
 - Python 3.8+
 - Git
 
-### 2. Cài đặt
+### 2. Installation
 
-a. Clone repository:
+a. Clone the repository:
 
-Mở terminal và chạy lệnh sau để sao chép mã nguồn về máy:
+Open a terminal and run the following commands to clone the source code:
 
 ```bash
 git clone https://github.com/your-username/your-repository-name.git
 cd your-repository-name
 ```
 
-b. Tạo và kích hoạt môi trường ảo:
+b. Create and activate a virtual environment:
 
-Môi trường ảo giúp quản lý các thư viện của dự án một cách độc lập.
+A virtual environment helps manage project dependencies independently.
 
 ```bash
-# Tạo môi trường ảo
+# Create virtual environment
 python -m venv .venv
 
-# Kích hoạt môi trường ảo (trên Windows)
+# Activate virtual environment (Windows)
 .\.venv\Scripts\activate
 
-# Kích hoạt môi trường ảo (trên macOS/Linux)
+# Activate virtual environment (macOS/Linux)
 # source .venv/bin/activate
 ```
 
-c. Cài đặt các thư viện cần thiết:
+c. Install required libraries:
 
-Cài đặt tất cả các gói phụ thuộc từ file `requirements.txt`.
+Install all dependencies from the `requirements.txt` file.
 
 ```bash
 pip install -r requirements.txt
@@ -70,66 +70,66 @@ pip install -r requirements.txt
 
 ---
 
-📈 **Sử dụng**
+📈 **Usage**
 
-Dự án bao gồm hai kịch bản chính: huấn luyện mô hình và chạy ứng dụng.
+The project includes two main scripts: model training and running the application.
 
-### 1. Huấn luyện mô hình (Tùy chọn)
+### 1. Model Training (Optional)
 
-Mô hình đã được huấn luyện và lưu sẵn trong thư mục `model/`. Tuy nhiên, nếu bạn muốn huấn luyện lại mô hình với dữ liệu mới, hãy chạy lệnh sau:
+The model is pre-trained and saved in the `model/` folder. However, if you want to retrain the model with new data, run:
 
 ```bash
 python train.py
 ```
 
-Lệnh này sẽ:
+This command will:
 
-- Đọc dữ liệu từ `data/sqli_dataset.csv`.
-- Xử lý, làm sạch dữ liệu.
-- Huấn luyện một mô hình Logistic Regression mới.
-- Lưu mô hình và vectorizer đã huấn luyện vào thư mục `model/`.
+- Read data from `data/sqli_dataset.csv`.
+- Process and clean the data.
+- Train a new Logistic Regression model.
+- Save the trained model and vectorizer in the `model/` folder.
 
-### 2. Chạy ứng dụng Web
+### 2. Run the Web Application
 
-Để khởi chạy giao diện web, hãy chạy lệnh sau:
+To launch the web interface, run:
 
 ```bash
 streamlit run app.py
 ```
 
-Một tab mới trên trình duyệt sẽ tự động mở ra, hiển thị ứng dụng của bạn. Bây giờ bạn có thể nhập các truy vấn để kiểm tra.
+A new browser tab will open automatically, displaying the application. You can now input queries to test.
 
 ---
 
-📂 **Cấu trúc thư mục**
+📂 **Project Structure**
 
 ```
 .
 ├── data/
-│   └── sqli_dataset.csv      # Tập dữ liệu dùng để huấn luyện
+│   └── sqli_dataset.csv      # Dataset for training
 ├── model/
-│   ├── model.pkl             # File mô hình đã huấn luyện
-│   └── vectorizer.pkl        # File vectorizer TF-IDF đã lưu
-├── .venv/                   # Thư mục môi trường ảo
-├── app.py                   # Mã nguồn ứng dụng Streamlit
-├── train.py                 # Kịch bản để huấn luyện mô hình
-├── requirements.txt         # Danh sách các thư viện cần thiết
-└── README.md                # File hướng dẫn này
+│   ├── model.pkl             # Trained model file
+│   └── vectorizer.pkl        # Saved TF-IDF vectorizer
+├── .venv/                   # Virtual environment folder
+├── app.py                   # Streamlit application source code
+├── train.py                 # Script for training the model
+├── requirements.txt         # List of required libraries
+└── README.md                # This instruction file
 ```
 
 ---
 
-💻 **Công nghệ sử dụng**
+💻 **Technologies Used**
 
-- **Python:** Ngôn ngữ lập trình chính.
-- **Scikit-learn:** Dùng để xây dựng và huấn luyện mô hình Logistic Regression.
-- **Pandas:** Dùng để xử lý và thao tác dữ liệu.
-- **NLTK:** Dùng để xử lý ngôn ngữ tự nhiên (ví dụ: loại bỏ stopword).
-- **Streamlit:** Dùng để xây dựng giao diện web tương tác.
-- **Joblib:** Dùng để lưu và tải mô hình đã huấn luyện.
+- **Python:** Main programming language.
+- **Scikit-learn:** Used to build and train the Logistic Regression model.
+- **Pandas:** Used for data processing and manipulation.
+- **NLTK:** Used for natural language processing (e.g., stopword removal).
+- **Streamlit:** Used to build the interactive web interface.
+- **Joblib:** Used to save and load the trained model.
 
 ---
 
-🙏 **Lời cảm ơn**
+🙏 **Acknowledgments**
 
-Dự án này được phát triển dựa trên ý tưởng và tập dữ liệu từ repository SQL-Injection-Detection-Using-Machine-Learning-for-NLP của tác giả Shaffaprawira.
+This project is developed based on the ideas and dataset from the repository SQL-Injection-Detection-Using-Machine-Learning-for-NLP by Shaffaprawira.
